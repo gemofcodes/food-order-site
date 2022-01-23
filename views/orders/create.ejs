@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <div class="create-order content">
+    <h2>Create order</h2>
+    
+    <form action="/orders" method="POST">
+      <label for="name">Order name: </label>
+      <input type="text" id="name" name="name" required>
+      <label for="quantity">Order quantity: </label>
+      <input type="text" id="quantity" name="quantity" required>
+      <label for="description">Order description: </label>
+      <textarea id="description" name="description" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+  
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>

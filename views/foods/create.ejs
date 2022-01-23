@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <div class="create-food content">
+    <h2>Create food</h2>
+    
+    <form action="/foods" method="POST">
+      <label for="name">Food name: </label>
+      <input type="text" id="name" name="name" required>
+      <label for="ingredient">Food ingredients: </label>
+      <input type="text" id="ingredient" name="ingredient" required>
+      <label for="price">Food price: </label>
+      <textarea id="price" name="price" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+  
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>
